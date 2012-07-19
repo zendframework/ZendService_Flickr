@@ -43,3 +43,9 @@ defined('TESTS_ZEND_OB_ENABLED') || define('TESTS_ZEND_OB_ENABLED', false);
  */
 defined('TESTS_GENERATE_REPORT') || define('TESTS_GENERATE_REPORT', false);
 defined('TESTS_GENERATE_REPORT_TARGET') || define('TESTS_GENERATE_REPORT_TARGET', '/path/to/target');
+
+/**
+ * Zend\Service\Flickr online tests
+ */
+defined('TESTS_ZEND_SERVICE_FLICKR_ONLINE_ENABLED') || define('TESTS_ZEND_SERVICE_FLICKR_ONLINE_ENABLED', false);
+defined('TESTS_ZEND_SERVICE_FLICKR_ONLINE_APIKEY') || define('TESTS_ZEND_SERVICE_FLICKR_ONLINE_APIKEY', 'Enter API key here');
