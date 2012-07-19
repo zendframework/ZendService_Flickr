@@ -8,7 +8,7 @@
  * @package   Zend_Service
  */
 
-namespace Zend\Service\Flickr\Exception;
+namespace ZendService\Flickr\Exception;
 
 /**
  * @category   Zend

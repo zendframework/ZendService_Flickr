@@ -8,11 +8,11 @@
  * @package   Zend_Service
  */
 
-namespace ZendTest\Service\Flickr;
+namespace ZendServiceTest\Flickr;
 
 use Zend\Http\Client\Adapter\Socket as SocketAdapter;
-use Zend\Service\Flickr\Flickr;
-use Zend\Service\Flickr\Exception\OutOfBoundsException;
+use ZendService\Flickr\Flickr;
+use ZendService\Flickr\Exception\OutOfBoundsException;
 
 /**
  * @category   Zend
@@ -97,7 +97,7 @@ class OnlineTest extends \PHPUnit_Framework_TestCase
 
         $count = 0;
         foreach ($resultSet as $result) {
-            $this->assertInstanceOf('Zend\Service\Flickr\Result', $result);
+            $this->assertInstanceOf('ZendService\Flickr\Result', $result);
             $count++;
         }
 
@@ -144,7 +144,7 @@ class OnlineTest extends \PHPUnit_Framework_TestCase
 
         $count = 0;
         foreach ($resultSet as $result) {
-            $this->assertInstanceOf('Zend\Service\Flickr\Result', $result);
+            $this->assertInstanceOf('ZendService\Flickr\Result', $result);
             $count++;
         }
 
@@ -185,7 +185,7 @@ class OnlineTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(1, $resultSet->firstResultPosition);
 
         foreach ($resultSet as $result) {
-            $this->assertInstanceOf('Zend\Service\Flickr\Result', $result);
+            $this->assertInstanceOf('ZendService\Flickr\Result', $result);
             if (isset($dateTakenPrevious)) {
                 $this->assertTrue(strcmp($result->datetaken, $dateTakenPrevious) > 0);
             }

@@ -8,7 +8,7 @@
  * @package   Zend_Service
  */
 
-namespace Zend\Service\Flickr;
+namespace ZendService\Flickr;
 
 use DOMElement;
 use DOMXPath;

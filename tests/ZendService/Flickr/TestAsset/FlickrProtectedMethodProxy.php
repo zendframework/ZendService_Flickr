@@ -8,9 +8,9 @@
  * @package   Zend_Service
  */
 
-namespace ZendTest\Service\Flickr\TestAsset;
+namespace ZendServiceTest\Flickr\TestAsset;
 
-use Zend\Service\Flickr\Flickr;
+use ZendService\Flickr\Flickr;
 
 /**
  * @category   Zend
