@@ -52,8 +52,7 @@ class OnlineTest extends \PHPUnit_Framework_TestCase
 
         $this->httpClientAdapterSocket = new SocketAdapter();
 
-        $this->flickr->getRestClient()
-                      ->getHttpClient()
+        $this->flickr->getHttpClient()
                       ->setAdapter($this->httpClientAdapterSocket);
     }
 
