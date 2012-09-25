@@ -178,7 +178,7 @@ class OnlineTest extends \PHPUnit_Framework_TestCase
 
         $resultSet = $this->flickr->tagSearch('php', $options);
 
-        $this->assertTrue(10 < $resultSet->totalResultsAvailable);
+        $this->assertGreaterThan(10, $resultSet->totalResultsAvailable);
         $this->assertEquals(10, $resultSet->totalResults());
         $this->assertEquals(10, $resultSet->totalResultsReturned);
         $this->assertEquals(1, $resultSet->firstResultPosition);
@@ -186,7 +186,7 @@ class OnlineTest extends \PHPUnit_Framework_TestCase
         foreach ($resultSet as $result) {
             $this->assertInstanceOf('ZendService\Flickr\Result', $result);
             if (isset($dateTakenPrevious)) {
-                $this->assertTrue(strcmp($result->datetaken, $dateTakenPrevious) > 0);
+                $this->assertGreaterThan(0, strcmp($result->datetaken, $dateTakenPrevious));
             }
             $dateTakenPrevious = $result->datetaken;
         }
