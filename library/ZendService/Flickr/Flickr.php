@@ -27,7 +27,7 @@ class Flickr
     /**
      * Base URI for the REST client
      */
-    const URI_BASE = 'http://www.flickr.com/services/rest/';
+    const URI_BASE = 'https://www.flickr.com/services/rest/';
 
     /**
      * Your Flickr API key
