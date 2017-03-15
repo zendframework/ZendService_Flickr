@@ -170,8 +170,16 @@ class Result
     {
         $xpath = new DOMXPath($image->ownerDocument);
 
+        $reflect = new \ReflectionClass($this);
+        $props = array();
+        foreach ($reflect->getProperties() as $prop) {
+            $props[strtolower($prop->getName())] = $prop;
+        }
+
         foreach ($xpath->query('./@*', $image) as $property) {
-            $this->{$property->name} = (string)$property->value;
+            if (isset($props[$property->name])) {
+                $this->{$props[$property->name]->getName()} = (string)$property->value;
+            }
         }
 
         $this->flickr = $flickr;
